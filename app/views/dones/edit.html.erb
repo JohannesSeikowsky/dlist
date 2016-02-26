@@ -1,11 +1,11 @@
 <%= render '/shared/logo' %>
 <%= render '/shared/header_links' %>
 
-<h3>edit</h3>
-<%= form_for([@user,@done]) do |f| %>
-  <%= f.text_area :content, plaeholder: "..." %> <br>
-  <%= f.submit "done." %>
-<% end %>
-
-
-        <%= link_to "x", user_done_path(@user, d), :method => :delete, data: { confirm: 'delete?' } %>
+<div class="edit-container">
+  <%= form_for([@user,@done]) do |f| %>
+    <%= f.text_area :content, plaeholder: "..." %> <br>
+    <%= f.submit "edit." %>
+  <% end %>
+  <hr>
+  <%= button_to "or delete", user_done_path(@user, @done), :method => :delete, data: { confirm: 'delete?' } %>
+</div>

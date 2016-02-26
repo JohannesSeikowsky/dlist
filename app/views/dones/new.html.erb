@@ -1,14 +1,14 @@
-<%= render '/shared/logo' %>
+<%= render '/shared/logo.html.erb' %>
 <%= render '/shared/header_links' %>
 
 <div class="row">
 <div class="done-container col-xs-12 col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-3">
-  <h2>What have you accomplished so far?</h2>
+  <h3>What have you accomplished so far?</h3>
   <%= form_for([@user, @done]) do |f| %>
     <% if @done.errors.any? %> <p> Parameters insufficient. Try again. </p> <% end %>
     <div>
-      <%= f.text_area :content, style: "width: 100%; height: 130px;" %> <br>
-      <%= f.submit "√ done.", class: "btn btn-md" %>
+      <%= f.text_area :content, placeholder: "", style: "width: 100%; height: 130px;" %> <br>
+      <%= f.submit "√ done.", class: "btn btn-sm" %>
     </div>
   <% end %>
   <br> 
@@ -19,7 +19,7 @@
     <% if !d.content.blank? %> 
       <p> 
         <%= d.content %> 
-        (<%= link_to "edit", edit_user_done_path(@user, d) %>)
+        <%= link_to "edit", edit_user_done_path(@user, d) %>
       </p>
     <% end %>
   <% end %>  
