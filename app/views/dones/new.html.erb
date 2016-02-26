@@ -19,8 +19,7 @@
     <% if !d.content.blank? %> 
       <p> 
         <%= d.content %> 
-        <%= link_to "edit |", edit_user_done_path(@user, d) %>
-        <%= link_to "x", user_done_path(@user, d), :method => :delete, data: { confirm: 'delete?' } %>
+        (<%= link_to "edit", edit_user_done_path(@user, d) %>)
       </p>
     <% end %>
   <% end %>  
