@@ -153,12 +153,19 @@ body{
   border: 2px solid lightGrey;
   border-radius: 10px;
   padding: 32px 97px 50px 97px;
+  @media (max-width: 600px){
+    padding: 16px 55px 30px 55px;
+  }
   margin-bottom: 70px;
   .text{
     background-color: #F0AD4E; 
     text-align: center; 
     padding: 8px 20px; 
     font-size: 14px;
+  }
+  .dones{
+    font-size: 15px;
+    margin-bottom: 18px;
   }
 }
 
@@ -175,9 +182,5 @@ body{
     width: 100%;
   }
 }
-
-
-
-
 
 

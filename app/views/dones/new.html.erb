@@ -1,4 +1,7 @@
-<%= render '/shared/logo.html.erb' %>
+<div  class="logo">
+  <a href="/"> <%= image_tag "logo.png" %></a>
+</div>
+
 <%= render '/shared/header_links' %>
 
 <div class="row">
@@ -17,9 +20,9 @@
   <!-- listing  -->
   <% @users_dones.each do |d| %>
     <% if !d.content.blank? %> 
-      <p> 
+      <p class="dones"> 
         <%= d.content %> 
-        <%= link_to "edit", edit_user_done_path(@user, d) %>
+        <span style="font-size: 10px;"> <%= link_to "edit", edit_user_done_path(@user, d) %> </span>
       </p>
     <% end %>
   <% end %>  
