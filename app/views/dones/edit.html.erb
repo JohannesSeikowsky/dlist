@@ -1,4 +1,7 @@
-<h3>edit done</h3>
+<%= render '/shared/logo' %>
+<%= render '/shared/header_links' %>
+
+<h3>edit</h3>
 <%= form_for([@user,@done]) do |f| %>
   <%= f.text_area :content, plaeholder: "..." %> <br>
   <%= f.submit "done." %>

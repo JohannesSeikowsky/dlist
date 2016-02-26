@@ -1,9 +1,10 @@
-/* 1. General */
 body{
   background-color: #F7EEE5;
+  hr{
+    border-color: lightGrey;
+  }
 }
 
-/* 2. Logo */
 .logo{
   position: absolute;
   top: 8px; 
@@ -16,7 +17,6 @@ body{
   }
 }
 
-/* 3. Header */
 .header{
   position: absolute;
   top: 14px; 
@@ -39,7 +39,6 @@ body{
   }
 }
 
-/* 4. Site-content */
 .site-content{
   margin-top: 110px;
   min-height: 850px;
@@ -72,7 +71,6 @@ body{
   }  
 }
 
-/* 5. Signup sidebar */
 .sidebar{
   margin-top: 110px;
   border: 2px solid lightGrey;
@@ -104,7 +102,6 @@ body{
   }
 }
 
-/* 6. Signup container */
 .signup-container{
   width: 460px;
   @media(max-width: 460px){
@@ -127,7 +124,6 @@ body{
   }
 }
 
-/* 7. Login container */
 .login-container {
   width: 460px;
   @media(max-width: 460px){
@@ -149,4 +145,26 @@ body{
     margin-bottom: 9px;
   }
 }
+
+.done-container{
+  margin-top: 110px;
+  min-height: 850px;
+  background-color: white;
+  border: 2px solid lightGrey;
+  border-radius: 10px;
+  padding: 32px 97px 50px 97px;
+  margin-bottom: 70px;
+  .text{
+    background-color: #F0AD4E; 
+    text-align: center; 
+    padding: 8px 20px; 
+    font-size: 16px;
+  }
+}
+
+
+
+
+
+
 

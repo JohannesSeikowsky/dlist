@@ -1,6 +1,12 @@
 <div class="header">
-  <%= link_to "Why to use DoneList.", why_path, class: "normal_link" %>
-  <%= link_to "How DoneList works.", how_path, class: "normal_link" %>
+  <% if flash.notice %>
+    <div style="color: red; font-size: 18px; font-weight: bold; display: inline;">
+      <%= notice %> 
+    </div>
+  <% else %>
+    <%= link_to "Why to use DoneList.", why_path, class: "normal_link" %>
+    <%= link_to "How DoneList works.", how_path, class: "normal_link" %>
+  <% end %>
   <%= link_to "Sign up", signup_path, class: "btn btn-md btn-success" %>
   <%= link_to "Log in", login_path, class: "btn btn-md btn-success" %>
 </div>
