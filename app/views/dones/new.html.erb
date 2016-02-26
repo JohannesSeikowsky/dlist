@@ -1,0 +1,23 @@
+<h3>What have you accomplished so far? Your done list.</h3>
+
+<!-- new form  -->
+<%= form_for([@user, @done]) do |f| %>
+  <% if @done.errors.any? %> <p> Parameters insufficient. Try again. </p> <% end %>
+
+  <div>
+    <%= f.text_area :content, style: "width: 200px; height: 130px;" %> <br>
+    <%= f.submit "done." %>
+  </div>
+<% end %>
+<hr> 
+
+<!-- dones listing  -->
+<% @users_dones.each do |d| %>
+  <% if !d.content.blank? %> 
+    <p> 
+      <%= d.content %> 
+      <%= link_to "edit |", edit_user_done_path(@user, d) %>
+      <%= link_to "x", user_done_path(@user, d), :method => :delete, data: { confirm: 'delete?' } %>
+    </p>
+  <% end %>
+<% end %>
