@@ -16,6 +16,11 @@ class UserSessionsController < ApplicationController
     end 
   end
 
+  def logout
+    session[:id_of_current_user] = nil
+    redirect_to root_path, notice: "You are logged out."
+  end
+
   private
   def parameters_of_session
     params.require(:provided_parameters).permit(:email, :password)

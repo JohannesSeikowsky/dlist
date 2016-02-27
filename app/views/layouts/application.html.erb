@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Donelist - fuck to do lists.</title>
+  <title>Donelist</title>
   <!-- boostrap CDN -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
   <!-- rails functionalities -->
@@ -14,6 +14,7 @@
   <%= yield %>
 
   <div style="position: absolute; bottom: 10px; left: 10px;">
+    <%= debug(params) if Rails.env.development? %>
   </div>
 
 </body>

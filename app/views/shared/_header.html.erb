@@ -8,6 +8,10 @@
     <%= link_to "Why to use DoneList.", why_path, class: "normal_link" %>
     <%= link_to "How DoneList works.", how_path, class: "normal_link" %>
   <% end %>
-  <%= link_to "Sign up", signup_path, class: "btn btn-md btn-success" %>
-  <%= link_to "Log in", login_path, class: "btn btn-md btn-success" %>
+  <% if logged_in? %>
+    <%= link_to "Log out", logout_path, method: :delete, class: "btn btn-md btn-primary" %>
+  <% else %>  
+    <%= link_to "Sign up", signup_path, class: "btn btn-md btn-success" %>
+    <%= link_to "Log in", login_path, class: "btn btn-md btn-success" %>
+  <% end %>
 </div>

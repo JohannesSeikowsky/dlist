@@ -1,4 +1,7 @@
 class DonesController < ApplicationController
+  
+  before_action :authorize
+
   # create stack
   def new
     @user = return_current_user
@@ -12,8 +15,7 @@ class DonesController < ApplicationController
     if @done.save
       redirect_to new_user_done_path(@user), notice: "added."
     else
-      flash.now.notice = "Parameters insufficient. Try again." 
-      render 'new'
+      redirect_to new_user_done_path(@user), notice: "Parameters insufficient. Try again."
     end
   end
 
@@ -38,7 +40,11 @@ class DonesController < ApplicationController
   end
 
   private
-  def parameters_of_done
-    params.require(:done).permit(:content, :user_id)
-  end
+    def parameters_of_done
+      params.require(:done).permit(:content, :user_id)
+    end
+
+    def authorize
+      redirect_to login_path, alert: "Please log in first." if return_current_user.nil?
+    end
 end

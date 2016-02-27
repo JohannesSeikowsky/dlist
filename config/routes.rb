@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   # session controller routes
   get "login", to: "user_sessions#new", as: "login"
   post "user_sessions", to: "user_sessions#create", as: "to_login"
+  delete "logout", to: "user_sessions#logout", as: "logout"
 
   # nested resource, dones of user
   resources :users do
