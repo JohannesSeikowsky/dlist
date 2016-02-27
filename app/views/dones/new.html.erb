@@ -1,30 +1,29 @@
-<div  class="logo">
-  <a href="/"> <%= image_tag "logo.png" %></a>
-</div>
-
-<%= render '/shared/header_links' %>
+<%= render '/shared/header' %>
 
 <div class="row">
-<div class="done-container col-xs-12 col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-3">
-  <h3>What have you accomplished so far?</h3>
-  <%= form_for([@user, @done]) do |f| %>
-    <% if @done.errors.any? %> <p> Parameters insufficient. Try again. </p> <% end %>
-    <div>
-      <%= f.text_area :content, placeholder: "", style: "width: 100%; height: 130px;" %> <br>
+  <div class="done-container col-xs-12 col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-3">
+
+    <!-- 1.form -->
+    <h3>What have you accomplished so far?</h3>
+    <%= form_for([@user, @done]) do |f| %>
+      <% if @done.errors.any? %> 
+        <p> Parameters insufficient. Try again. </p> 
+      <% end %>
+      <%= f.text_area :content %> <br>
       <%= f.submit "√ done.", class: "btn btn-sm" %>
-    </div>
-  <% end %>
-  <br> 
-  <!-- text -->
-  <div class="text">"This is your DoneList. You will receive a weekly Email reminder containing it, so that you dont forget how much has already been accomplished."</div> <hr> 
-  <!-- listing  -->
-  <% @users_dones.each do |d| %>
-    <% if !d.content.blank? %> 
-      <p class="dones"> 
-        <%= d.content %> 
-        <span style="font-size: 10px;"> <%= link_to "edit", edit_user_done_path(@user, d) %> </span>
-      </p>
+    <% end %> <br> 
+
+    <!-- 2.text -->
+    <div class="text">"This is your DoneList. You will receive a weekly Email reminder containing it, so that you dont forget how much has already been accomplished."</div> <hr> 
+
+    <!-- 3.dones -->
+    <% @users_dones.each do |d| %>
+      <% if !d.content.blank? %> 
+        <div class="dones"> 
+          <%= d.content %> <span id="edit"> <%= link_to "edit", edit_user_done_path(@user, d) %> </span>
+        </div>
+      <% end %>
     <% end %>
-  <% end %>  
-</div>
+
+  </div>
 </div>

@@ -1,8 +1,9 @@
-<div class="header">
-  <% if flash.notice %>
-    <div style="color: red; font-size: 17px; font-weight: bold; display: inline;">
-      <%= notice %> 
-    </div>
+<div  class="header_logo">
+  <a href="/"><%= image_tag "logo.png" %></a>
+</div>
+
+<div class="header_links">
+  <% if flash.notice %> <div class="notice_flash"> <%= notice %> </div> 
   <% else %>
     <%= link_to "Why to use DoneList.", why_path, class: "normal_link" %>
     <%= link_to "How DoneList works.", how_path, class: "normal_link" %>

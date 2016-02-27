@@ -1,16 +1,16 @@
-<%= render '/shared/logo' %>
-<%= render '/shared/header_links' %>
+<%= render '/shared/header' %>
 
 <div class="row">
-  <div class="col-xs-10 col-xs-offset-1 col-md-7 col-md-offset-1 site-content">
+
+  <!-- 1.content -->
+  <div class="site-content col-xs-10 col-xs-offset-1 col-md-7 col-md-offset-1">
     <h1>Why</h1>
-    <h3>...</h3>
-    <!-- <div style="text-align: center; padding-top: 50px;">
-      <img src="http://www.therhouse.com/wp-content/uploads/2015/09/todo-list-simple-hate-yourself-funny-ecard-ewZ.png">
-    </div> -->
   </div>
-  <div class="hidden-xs hidden-sm col-md-3 sidebar">
-    <img src="assets/arrow.png">
+
+  <!-- 2.sidebar -->
+  <div class="sidebar hidden-xs hidden-sm col-md-3">
+    <%= image_tag "arrow.png" %>
     <%= render '/shared/signup_form' %>
   </div>
+  
 </div>

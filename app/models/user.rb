@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  
   has_many :dones
 
   before_save :passing_and_salting
@@ -23,4 +24,5 @@ class User < ActiveRecord::Base
       nil
     end
   end
+
 end

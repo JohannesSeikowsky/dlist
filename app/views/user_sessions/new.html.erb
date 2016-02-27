@@ -1,15 +1,20 @@
-<%= render '/shared/logo' %>
-<%= render '/shared/header_links' %>
+<%= render '/shared/header' %>
 
 <div class="login-container">
+
+  <!-- 1.head -->
   <h4>Nice to have you back :)</h4>
+
+  <!-- 2.form -->
   <%= form_for :provided_parameters, url: to_login_path do |f| %>
     <%= f.text_field :email, placeholder: "taggard@gmail.com", class: "form-control" %>
     <%= f.password_field :password, placeholder: "password", class: "form-control" %>
-    <div style="text-align: center;">
+    <div class="center-align">
       <%= f.submit "Log in", class: "btn btn-md btn-warning" %>
     </div> 
-  <% end %>
-  <hr>
+  <% end %> <hr>
+
+  <!-- 3.text -->
   <p> DoneList is one small app designed to minimally improve your everyday. Have a try and write feedback. </p>
+  
 </div>
