@@ -6,7 +6,7 @@ class DonesController < ApplicationController
   def new
     @user = return_current_user
     @done = @user.dones.build
-    @users_dones = @user.dones
+    @users_dones = @user.dones.order('created_at DESC')
   end
 
   def create
@@ -45,6 +45,6 @@ class DonesController < ApplicationController
     end
 
     def authorize
-      redirect_to login_path, alert: "Please log in first." if return_current_user.nil?
+      redirect_to login_path, notice: "Please log in first ..." if return_current_user.nil?
     end
 end
