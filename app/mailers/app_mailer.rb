@@ -7,7 +7,7 @@ class AppMailer < ApplicationMailer
     mail(to: user.email, subject: "Welcome to DoneList.")
   end
 
-  def signup_notification(user)
+  def notification(user)
     @user = user
     mail(to: "seikowsky@gmail.com", subject: "New DoneList User.")
   end
