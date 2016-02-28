@@ -5,11 +5,9 @@ class User < ActiveRecord::Base
   before_save :passing_and_salting
   attr_accessor :password
 
-  EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
-
   validates_confirmation_of :password
   validates :name, presence: true
-  validates :email, presence: true, uniqueness: true, format: {with: EMAIL_REGEX}
+  validates :email, presence: true, uniqueness: true
   validates :password, presence: true, length: {minimum: 6}
 
   def passing_and_salting
