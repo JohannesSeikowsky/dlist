@@ -9,6 +9,7 @@ class UsersController < ApplicationController
       AppMailer.signup(@user).deliver
       session[:id_of_current_user] = @user.id
       redirect_to new_user_done_path(@user), notice: "Welcome to DoneList. You have signed up."
+      AppMailer.signup_notification(@user).deliver
     else
       flash.now.notice = "Parameters insufficient. Try again."
       render 'new'
