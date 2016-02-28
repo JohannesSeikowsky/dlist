@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
   EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 
   validates_confirmation_of :password
-  validates :name, presence: true, length: {minimum: 3}
+  validates :name, presence: true
   validates :email, presence: true, format: {with: EMAIL_REGEX}
   validates :password, presence: true, length: {minimum: 6}
 

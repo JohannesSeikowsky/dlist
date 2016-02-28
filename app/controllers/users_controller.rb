@@ -6,8 +6,9 @@ class UsersController < ApplicationController
   def create
     @user = User.new(parameters_of_user)
     if @user.save
+      AppMailer.signup(@user).deliver
       session[:id_of_current_user] = @user.id
-      redirect_to new_user_done_path(@user), notice: "You have signed up."
+      redirect_to new_user_done_path(@user), notice: "Welcome to DoneList. You have signed up."
     else
       flash.now.notice = "Parameters insufficient. Try again."
       render 'new'
