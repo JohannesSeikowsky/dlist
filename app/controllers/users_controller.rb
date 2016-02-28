@@ -12,8 +12,7 @@ class UsersController < ApplicationController
       @initial_done = @user.dones.build(content: "Signed up for DoneList :)").save
       redirect_to new_user_done_path(@user), notice: "Welcome to DoneList. You have signed up."
     else
-      flash.now.notice = "Parameters insufficient. Try again."
-      render 'new'
+      redirect_to signup_path, notice: "Parameters insufficient. Try again."
     end
   end
 
