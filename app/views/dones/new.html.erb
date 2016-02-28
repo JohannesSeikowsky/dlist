@@ -9,12 +9,12 @@
       <% if @done.errors.any? %> 
         <p> Parameters insufficient. Try again. </p> 
       <% end %>
-      <%= f.text_area :content %> <br>
+      <%= f.text_area :content, placeholder: "write here." %> <br>
       <%= f.submit "√ done.", class: "btn btn-sm" %>
     <% end %> <br> 
 
     <!-- 2.text -->
-    <div class="text">"This is your DoneList. You will receive a weekly Email reminder containing it, so that you dont forget how much has already been accomplished."</div> <hr> 
+    <div class="text">"This is your DoneList. You will receive a weekly email reminder including it, to remind you how many things have already accomplished."</div> <hr> 
 
     <!-- 3.dones -->
     <% @users_dones.each do |d| %>

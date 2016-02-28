@@ -1,7 +1,5 @@
 class DonesController < ApplicationController
-  
   before_action :authorize
-
   # create stack
   def new
     @user = return_current_user
