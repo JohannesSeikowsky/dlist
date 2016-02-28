@@ -9,7 +9,7 @@ class User < ActiveRecord::Base
 
   validates_confirmation_of :password
   validates :name, presence: true
-  validates :email, presence: true, format: {with: EMAIL_REGEX}
+  validates :email, presence: true, uniqueness: true, format: {with: EMAIL_REGEX}
   validates :password, presence: true, length: {minimum: 6}
 
   def passing_and_salting
