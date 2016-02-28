@@ -9,6 +9,7 @@
     <%= link_to "How DoneList works.", how_path, class: "normal_link" %>
   <% end %>
   <% if logged_in? %>
+    <%= link_to "DoneList", new_user_done_path(return_current_user), class: "btn btn-md btn-primary" %>
     <%= link_to "Log out", logout_path, method: :delete, class: "btn btn-md btn-primary" %>
   <% else %>  
     <%= link_to "Sign up", signup_path, class: "btn btn-md btn-success" %>

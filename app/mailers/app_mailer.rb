@@ -4,7 +4,7 @@ class AppMailer < ApplicationMailer
 
   def signup(user)
     @user = user
-    mail(to: user.email, subject: "Welcome to DoneList.")
+    mail(to: user.email, subject: "Welcome to DoneList!")
   end
 
   def notification(user)
