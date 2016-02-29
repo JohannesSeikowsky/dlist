@@ -1,14 +1,9 @@
-<%= render '/shared/header' %>
-
 <div class="edit-container">
-
   <!-- 1.form -->
   <%= form_for([@user,@done]) do |f| %>
     <%= f.text_area :content, plaeholder: "..." %> <br>
     <%= f.submit "edit." %>
   <% end %> <hr>
-
   <!-- 1.btn -->
   <%= button_to "delete", user_done_path(@user, @done), :method => :delete, data: { confirm: 'delete?' } %>
-
 </div>

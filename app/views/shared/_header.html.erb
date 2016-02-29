@@ -15,8 +15,7 @@
     <% if flash.notice %> 
       <div class="notice_flash"> <%= notice %> </div> 
     <% else %>
-      <%= link_to "Why to use DoneList.", why_path, class: "normal_link" %>
-      <%= link_to "How DoneList works.", how_path, class: "normal_link" %>
+      <a href="mailto:seikowsky@gmail.com" class="normal_link"> Have a suggestion? Write to admin. </a>
     <% end %>
     <%= link_to "Sign up", signup_path, class: "btn btn-md btn-success" %>
     <%= link_to "Log in", login_path, class: "btn btn-md btn-success" %>

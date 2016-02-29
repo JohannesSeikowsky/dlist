@@ -1,8 +1,5 @@
-<%= render '/shared/header' %>
-
 <div class="row">
   <div class="done-container col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
-
     <!-- 1.form -->
     <h3>What have you accomplished so far?</h3>
     <%= form_for([@user, @done]) do |f| %>
@@ -24,6 +21,5 @@
         </div>
       <% end %>
     <% end %>
-
   </div>
 </div>
