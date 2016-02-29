@@ -11,7 +11,8 @@ class AppMailer < ApplicationMailer
     mail(to: "seikowsky@gmail.com", subject: "New DoneList User.")
   end
 
-  def every_third_day(arg1, arg2)
-    mail(to: user.email, subject: "you are great")
+  def reminder(user)
+    @user = user
+    mail(to: user.email, subject: "weekly reminder")
   end
 end

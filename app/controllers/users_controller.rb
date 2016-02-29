@@ -10,14 +10,14 @@ class UsersController < ApplicationController
       AppMailer.notification(@user).deliver
       session[:id_of_current_user] = @user.id
       @initial_done = @user.dones.build(content: "Signed up for DoneList :)").save
-      redirect_to new_user_done_path(@user), notice: "Welcome to DoneList. You have signed up."
+      redirect_to new_user_done_path(@user), notice: "Welcome #{@user.name}. You have successfully signed up."
     else
       redirect_to signup_path, notice: "Parameters insufficient. Try again."
     end
   end
 
   private
-  def parameters_of_user
-    params.require(:user).permit(:name, :email, :password, :password_confirmation)
-  end
+    def parameters_of_user
+      params.require(:user).permit(:name, :email, :password, :password_confirmation)
+    end
 end
