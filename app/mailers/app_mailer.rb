@@ -13,6 +13,7 @@ class AppMailer < ApplicationMailer
 
   def reminder(user)
     @user = user
-    mail(to: user.email, subject: "weekly reminder")
+    @dones = user.dones
+    mail(to: user.email, subject: "A reminder of your awesomeness.")
   end
 end

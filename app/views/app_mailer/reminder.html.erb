@@ -1,1 +1,9 @@
-<p> does this arribe at seik. when I invoke the rake task. <%= @user.name %> </p>
+<p> Hi <%= @user.name %>, </p> <br> <br>
+<p> To remind you of how much has already been accomplished, here is your weekly DoneList: </p>
+<p> (Log in to add more: here.)</p> <br> <br>
+
+<% @dones.each do |d| %>
+  <% if !d.content.blank? %> 
+      <p> <%= d.content %> </p>
+  <% end %>
+<% end %>
