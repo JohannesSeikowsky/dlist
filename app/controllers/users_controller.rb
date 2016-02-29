@@ -9,6 +9,7 @@ class UsersController < ApplicationController
       AppMailer.signup(@user).deliver
       AppMailer.notification(@user).deliver
       session[:id_of_current_user] = @user.id
+      session[:just_signed_up] = "correct"
       @initial_done = @user.dones.build(content: "Signed up for DoneList :)").save
       redirect_to new_user_done_path(@user), notice: "Welcome #{@user.name}. You have successfully signed up."
     else

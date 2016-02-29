@@ -13,11 +13,12 @@ class UserSessionsController < ApplicationController
       # don't log in
       flash.now.notice = "Parameters insufficient. Try again."
       render "new"
-    end 
+    end
   end
 
   def logout
     session[:id_of_current_user] = nil
+    session[:just_signed_up] = nil
     redirect_to root_path, notice: "You are logged out."
   end
 
