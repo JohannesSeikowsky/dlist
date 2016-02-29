@@ -7,7 +7,7 @@
     <% if flash.notice %> 
       <div class="notice_flash"> <%= notice %> </div> 
     <% else %>
-      <a href="mailto:seikowsky@gmail.com" class="normal_link"> Have a suggestion? Write to admin. </a>
+      <a href="mailto:seikowsky@gmail.com?subject=suggestion" class="normal_link">Have a suggestion? Write to admin.</a>
     <% end %>
     <%= link_to "DoneList", new_user_done_path(return_current_user), class: "btn btn-md btn-primary" %>
     <%= link_to "Log out", logout_path, method: :delete, class: "btn btn-md btn-primary" %>
