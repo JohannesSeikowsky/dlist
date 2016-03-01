@@ -1,6 +1,5 @@
-<p> <%= @user.name %>, take a second to give yourself some propts. Here's the list of things you have already accomplished :) </p> <br>
-
-<p> <strong> Your DoneList </strong> </p>
+<p> <%= @user.name %>, take a second to give yourself some propts. Here's the list of things you have already accomplished :) </p>
+<p style="text-decoration: underline;"> <strong> Your DoneList </strong> </p>
 <% @dones.each do |d| %>
   <% if !d.content.blank? %> 
       <p> <%= d.content %> </p>
@@ -8,4 +7,4 @@
 <% end %>
 
 <br>
-p.s. To add to the list, <%= link_to "login here.", login_path %>
+p.s. To add to the list, <%= link_to "login here.", "https://yourdonelist.herokuapp.com/login" %>
