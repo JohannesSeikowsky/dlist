@@ -1,4 +1,4 @@
-<p> <strong> Your DoneList - </strong> so you dont forget what has already been accomplished. (to add some more: login.) </p>
+<p> <%= @user.name %>, here the things you have already accomplished. Take a second to give yourself some propts. :) </p>
 
 <% @dones.each do |d| %>
   <% if !d.content.blank? %> 
@@ -7,4 +7,4 @@
 <% end %>
 
 <br>
-<br>
+p.s. To add more, login: <%= link_to "here.", login_path %>
