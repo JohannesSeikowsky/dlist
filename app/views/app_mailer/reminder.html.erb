@@ -1,5 +1,6 @@
-<p> <%= @user.name %>, take a second to give yourself some propts. Here are the things you have already accomplished :) </p> <br>
+<p> <%= @user.name %>, take a second to give yourself some propts. Here's the list of things you have already accomplished :) </p> <br>
 
+<p> <strong> Your DoneList </strong> </p>
 <% @dones.each do |d| %>
   <% if !d.content.blank? %> 
       <p> <%= d.content %> </p>
