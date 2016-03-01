@@ -1,14 +1,12 @@
 <div class="row">
   <div class="done-container col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
-    
+    <!-- top -->
+    <div id="after-signup-pointer">
+      This is where you can <br> write down your DoneList. <br>
+      <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
+    </div>
+
     <!-- form -->
-    <% if session[:just_signed_up] %>
-      <div id="after-signup-pointer"> This is where you can <br> write down your DoneList. <br> 
-          <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
-
-      </div>
-    <% end %>
-
     <%= form_for([@user, @done]) do |f| %>
       <% if @done.errors.any? %> 
         <p> Parameters insufficient. Try again. </p> 
@@ -30,7 +28,6 @@
     <% end %>
   </div>
 </div>
-
 
 <script type="text/javascript">
   /* setTimeout(function () {
