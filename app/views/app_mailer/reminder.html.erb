@@ -1,9 +1,11 @@
-<p> Hi <%= @user.name %>, </p> <br> <br>
-<p> To remind you of how much has already been accomplished, here is your weekly DoneList: </p>
-<p> (Log in to add more: here.)</p> <br> <br>
+<p> <%= @user.name %>, these are some of the things that you have already achived. </p>
+<p> (login: here to add some more.) </p>
 
 <% @dones.each do |d| %>
   <% if !d.content.blank? %> 
       <p> <%= d.content %> </p>
   <% end %>
 <% end %>
+
+<br>
+<br>
