@@ -1,11 +1,10 @@
-<p> 
-  <%= @user.name %>, take a second to appreciate all you have done already. <br>
-  (<%= link_to "Login here", "https://yourdonelist.herokuapp.com/login" %> to add to the list.)
-</p>
+<p> Take a second to appreciate all you have done already: <br> </p>
 
 <p style="text-decoration: underline;"> <strong> Your DoneList </strong> </p>
 <% @dones.each do |d| %>
   <% if !d.content.blank? %> 
       <p> <%= d.content %> </p>
   <% end %>
-<% end %> 
+<% end %> <br>
+
+<p>p.s. <%= link_to "Login here", "https://yourdonelist.herokuapp.com/login" %> to add to the list.</p>
