@@ -1,5 +1,4 @@
-<p> <%= @user.name %>, these are some of the things that you have already achived. </p>
-<p> (login: here to add some more.) </p>
+<p> <strong> Your DoneList - </strong> so you dont forget what has already been accomplished. (to add some more: login.) </p>
 
 <% @dones.each do |d| %>
   <% if !d.content.blank? %> 
