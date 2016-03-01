@@ -13,7 +13,7 @@ class AppMailer < ApplicationMailer
 
   def reminder(user)
     @user = user
-    @dones = user.dones
+    @dones = user.dones.order('created_at DESC')
     mail(to: user.email, subject: "A reminder of your awesomeness.")
   end
 end
