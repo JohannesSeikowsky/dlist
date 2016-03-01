@@ -8,7 +8,7 @@
     <p>The common 'To-Do' list suffers from one defect - one is always short of it. If one wasn't, it wouldn't be a to-do anymore, would it?
       DoneList plays a small trick on this state of affairs by periodically reminding one of all the things one has already accomplished. It's a fun and healthy thing :)</p> 
 
-    <div class="img">
+    <div class="image-container">
       <img src="http://cdn.someecards.com/someecards/filestorage/todo-list-simple-hate-yourself-funny-ecard-ewZ.png">
     </div>
 
@@ -17,8 +17,8 @@
   </div>
 
   <!-- 2.sidebar -->
-  <div class="sidebar hidden-xs hidden-sm col-md-3">
-    <%= image_tag "arrow.png" %>
-    <%= render '/shared/signup_form' %>
+  <div class="hidden-xs hidden-sm col-md-3">
+    <div class="arrow"> <%= image_tag "arrow.png" %> </div>
+    <div class="sidebar"> <%= render '/shared/signup_form' %> </div>
   </div>
 </div>

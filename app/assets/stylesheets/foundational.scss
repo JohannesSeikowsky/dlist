@@ -71,19 +71,28 @@ hr{border-color: lightGrey;}
     text-align: center;
   }
   @media(max-width: 752px) {img{display: none;}}  
-  .img{
+  .image-container{
     text-align: center;
     width: 100%;
-    padding-top: 5px;
+    padding-top: 5px;  
+    opacity: 0.6;
   }
+}
+
+
+/* arrow */
+.arrow{
+  margin-top: 130px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  img {height: 180px;}
 }
 
 /* sidebar */
 .sidebar{
-  margin-top: 110px;
   border: 2px solid lightGrey;
   margin-left: 30px;
-  padding: 35px 40px;
+  padding: 15px 35px;
   border-radius: 10px;
   -moz-border-radius: 10px; 
   -webkit-border-radius: 10px; 
