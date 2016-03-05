@@ -22,3 +22,11 @@
     <div class="sidebar"> <%= render '/shared/signup_form' %> </div>
   </div>
 </div>
+
+
+<script type="text/javascript">
+  $(window).scroll(function(){
+    $(".side").css({"margin-top": ($(window).scrollTop()+130) + "px"});
+  });
+</script>
+
