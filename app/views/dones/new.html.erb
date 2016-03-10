@@ -23,7 +23,7 @@
       <% if !d.content.blank? %> 
         <div class="done"> 
           <p> <%= d.content %> </p> 
-          <span id="tstamp"> <%= d.created_at.strftime("%d.%m") %> </span> 
+          <span id="tstamp"> Date: <%= d.created_at.strftime("%d.%m") %> </span> 
           <%= link_to "edit", edit_user_done_path(@user, d) %>
         </div>
       <% end %>
