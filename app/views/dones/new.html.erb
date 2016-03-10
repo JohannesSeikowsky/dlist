@@ -16,21 +16,17 @@
     <% end %> <br>
 
     <!-- text -->
-    <div class="text"><strong>Your DoneList Email Reminders go out on Wednesdays and Sundays.</strong></div><hr> 
+    <div class="text"><strong>DoneList Reminders go out on Wednesdays and Sundays.</strong></div><hr> 
 
     <!-- dones -->
     <% @users_dones.each do |d| %>
       <% if !d.content.blank? %> 
         <div class="done"> 
-          <p> <%= d.content %> </p> <%= link_to "edit", edit_user_done_path(@user, d) %>
+          <p> <%= d.content %> </p> 
+          <span id="tstamp"> <%= d.created_at.strftime("%d.%m") %> </span> 
+          <%= link_to "edit", edit_user_done_path(@user, d) %>
         </div>
       <% end %>
     <% end %>
   </div>
 </div>
-
-<script type="text/javascript">
-  /* setTimeout(function () {
-      document.getElementById('after-signup-pointer').style.display='none';
-  }, 5500); */
-</script>

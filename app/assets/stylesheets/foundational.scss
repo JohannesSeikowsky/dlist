@@ -219,6 +219,12 @@ hr{border-color: lightGrey;}
     padding: 15px 19px;
     position: relative;
     p:hover{cursor: default;}
+    #tstamp{
+      position: absolute;
+      bottom: 3px;
+      left: 20px;
+      font-size: 10px;      
+    }
     a{
       position: absolute;
       bottom: 3px;
@@ -228,7 +234,7 @@ hr{border-color: lightGrey;}
   }
   .done:hover{
     background-color: #F0AD4E;
-    a{font-size: 15px;} 
+    a{font-size: 17px;} 
   }
 }
 
@@ -250,12 +256,12 @@ hr{border-color: lightGrey;}
   width: 460px;
   @media(max-width: 460px){width: 100%;}
   margin: 160px auto;
-  padding: 48px 100px 65px 100px;
+  padding: 48px 80px 65px 80px;
   border: 2px solid lightGrey;
   border-radius: 10px;
   -moz-border-radius: 10px; 
   -webkit-border-radius: 10px; 
-  textarea{width: 100%;}
+  textarea{width: 100%; height: 95px;}
 }
 
 #after-signup-pointer{
