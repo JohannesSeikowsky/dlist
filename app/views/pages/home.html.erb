@@ -19,15 +19,34 @@
   <!-- 2.sidebar -->
   <div class="side hidden-xs hidden-sm col-md-3">
     <div class="arrow"> <%= image_tag "arrow.png" %> </div>
-    <div class="sidebar"> <%= render '/shared/signup_form' %> </div>
+    <div class="sidebar"> 
+      <%= render '/shared/signup_form' %> 
+      <hr>
+      <h4>DoneList Resources</h4>
+      <%= link_to "\"Use a Done Listto Keep Yourself Feeling Efficient and Motivated\"", "http://lifehacker.com/5954506/use-a-done-list-to-keep-yourself-feeling-efficient-and-motivated", target: "_blank" %>
+      <strong> Lifehacker.com </strong>
+      <br> <br>
+      <%= link_to "\"Here's What You Should Do Instead Of Writing A To-Do List\"", "http://www.businessinsider.com/swap-your-to-do-list-for-a-done-list-2014-8?IR=T", target: "_blank" %>
+      <strong> Businessinsider.com </strong>
+      <br> <br>
+      <%= link_to "\"Why To-Do Lists Don’t Work and Done Lists Do\"", "http://www.lifehack.org/articles/productivity/why-to-do-lists-dont-work-and-done-lists-do.html", target: "_blank" %> <br>
+      <strong> Lifehack.org </strong>
+      <br> <br>
+      <%= link_to "\"Harnessing the Power of Progress\"", "http://99u.com/articles/24875/the-art-of-the-done-list-harnessing-the-power-of-progress", target: "_blank" %> <br>
+      <strong> 99u.com </strong> <br> <br>
+      <%= link_to "\"How To Use A Done List To Achieve Your Resolutions\"", "http://www.makeuseof.com/tag/ditch-dos-use-done-list-achieve-resolutions/", target: "_blank" %> <br>
+      <strong> makeuseof.com </strong> <br> <br>
+      <%= link_to "\"Work Smarter: Why You Should Add a Done List to Your To-Do List\"", "http://nymag.com/scienceofus/2014/07/add-a-done-list-to-your-to-do-list.html", target: "_blank" %> <br>
+      <strong> nymag.com.com </strong> <br> <br>
+    </div>
   </div>
 </div>
 
 
-<!-- sliding sidebard down with scroll -->
+<!-- sliding sidebard down with scroll
 <script type="text/javascript">
   $(window).scroll(function(){
     $(".side").css({"margin-top": ($(window).scrollTop()+130) + "px"});
   });
-</script>
+</script> -->
 
