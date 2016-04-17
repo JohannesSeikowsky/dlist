@@ -6,8 +6,8 @@ class UsersController < ApplicationController
   def create
     @user = User.new(parameters_of_user)
     if @user.save
-      AppMailer.signup(@user).deliver
-      AppMailer.notification(@user).deliver
+      # AppMailer.signup(@user).deliver
+      # AppMailer.notification(@user).deliver
       session[:id_of_current_user] = @user.id
       session[:just_signed_up] = "correct"
       @initial_done = @user.dones.build(content: "Signed up for DoneList.").save
