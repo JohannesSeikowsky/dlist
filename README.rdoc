@@ -1,4 +1,1 @@
-DoneList Version1
-
-see:
-https://yourdonelist.herokuapp.com/
+DoneList is a small tool that lets you record what you've already accomplished and sends you email reminders, so you don't forget.
